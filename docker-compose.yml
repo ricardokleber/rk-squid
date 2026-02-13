@@ -1,0 +1,9 @@
+services:
+  rk-squid:
+    image: ricardokleber/rk-squid:latest
+    container_name: rk-squid
+    hostname: rk-squid
+    restart: always
+    ports:
+      - "3128:3128"
+    command: ["squid", "-N", "-d", "1"]
